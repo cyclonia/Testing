@@ -1,0 +1,238 @@
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="Style.css" />
+<title>Welcome to Haldia Institute of Technology</title>
+
+<script language="javascript"> 
+function check()
+{
+if (document.registration.branch.options[document.registration.branch.selectedIndex].value == "")
+ { 
+alert("Select Your Branch !!!"); 
+c
+}
+if (document.registration.semester.options[document.registration.semester.selectedIndex].value == "") 
+{ 
+alert("Select Semester !!!"); 
+return false;
+}
+if (document.registration.dobDay.options[document.registration.dobDay.selectedIndex].value == "")
+ { 
+alert("Select Day of Your Date Of Birth !!!"); 
+return false;
+}
+if (document.registration.dobMonth.options[document.registration.dobMonth.selectedIndex].value == "") 
+{ 
+alert("Select Month of Your Date of Birth !!!");
+return false;
+}
+if (document.registration.dobYear.options[document.registration.dobYear.selectedIndex].value == "")
+ { 
+alert("Select Year of Your Date of Birth !!!"); 
+return false;
+}
+
+
+var clickedButton = ""; 
+for(i=0;i<2;i++)
+{ 
+	if(document.registration.gender[ i ].checked == true)
+		{ 
+			clickedButton = "true"; 
+			break 
+		} 
+} 
+if (clickedButton == "")
+ { 
+		alert("Select Your Gender !!!");
+ }
+if(document.registration.studentAddress.value == "") 
+ { 
+			alert("Please Enter Your Address !!!");
+} 
+}
+</script> 
+
+
+
+
+</head>
+
+
+<body>
+<div id="container">
+		
+        <br><table><tr><td><h1>HALDIA INSTITUTE OF TECHNOLOGY</h1></td></tr></table>
+        <div id="menu">
+        	<ul>
+            	<li class="menuitem"><a href="HomePage.html">Home</a></li>
+                <li class="menuitem"><a href="AboutUs.html">About Us</a></li>
+                <li class="menuitem"><a href="OnlineTest.jsp">Online Test</a></li>
+                
+                <li class="menuitem"><a href="ContactUs.html">Contact Us</a></li>
+              <li class="menuitem"><a href="UserLogin.html">User Login</a></li>
+               <li class="menuitem"><a href="UserSignUp.html">Sign Up</a></li>
+            </ul>
+        </div>
+        </div>
+        <form action="RegistrationServlet" method="post" name="registration" onsubmit="return check()">
+        	    <table><tr><td colspan="2"><font class="defaultfont" size=6 color="#008080"><b><u>Registration Form</u></b></font></td></tr></table>
+        	<br>
+        	<table>
+
+            <tr>
+						<td align="right"><font class="defaultfont" size=4>First Name:&nbsp;</font></td>
+						<td><input name="studentFirstName" type="text" size="30" required="required"></td>
+					</tr>
+					<tr>
+						<td align="right"><font class="defaultfont" size=4>Last Name:&nbsp;</font></td>
+						<td><input name="studentLastName" type="text" size="30" required="required"></td>
+					</tr>
+					<tr>
+						<td align="right"><font class="defaultfont" size=4>Email Address:&nbsp;</font></td>
+						<td><input name="email" size="30" type="text" required="required"></td>
+					</tr>
+					<tr>
+						<td align="right"><font class="defaultfont" size=4>Branch:&nbsp;</font></td>
+						<td>
+							<select name="branch">
+								<option selected="selected" value="">Branch
+								</option><option value="CSE">CSE
+								</option><option value="ECE">ECE
+								</option><option value="IT">IT
+								</option><option value="BT">BT
+								</option><option value="FT">FT
+								</option><option value="ME">ME
+								</option><option value="CE">CE
+								</option><option value="EE">EE
+						
+							</option></select>
+							</td></tr>
+					<tr>
+						<td align="right"><font class="defaultfont" size=4>Semester:&nbsp;</font></td>
+						<td>
+							<select name="semester">
+								<option selected="selected" value="">Semester
+								</option><option value="01">1st
+								</option><option value="02">2nd
+								</option><option value="03">3rd
+								</option><option value="04">4th
+								</option><option value="05">5th
+								</option><option value="06">6th
+								</option><option value="07">7th
+								</option><option value="08">8th
+								
+							</option></select>
+							</td></tr>
+					<tr>
+						<td align="right"><font class="defaultfont" size=4>Date of Birth:&nbsp;</font></td>
+						<td>
+						<select name="dobDay">
+								<option selected="selected" value="">Day
+								</option><option value="01">01
+								</option><option value="02">02
+								</option><option value="03">03
+								</option><option value="04">04
+								</option><option value="05">05
+								</option><option value="06">06
+								</option><option value="07">07
+								</option><option value="08">08
+								</option><option value="09">09
+								</option><option value="10">10
+								</option><option value="11">11
+								</option><option value="12">12
+								</option><option value="13">13
+								</option><option value="14">14
+								</option><option value="15">15
+								</option><option value="16">16
+								</option><option value="17">17
+								</option><option value="18">18
+								</option><option value="19">19
+								</option><option value="20">20
+								</option><option value="21">21
+								</option><option value="22">22
+								</option><option value="23">23
+								</option><option value="24">24
+								</option><option value="25">25
+								</option><option value="26">26
+								</option><option value="27">27
+								</option><option value="28">28
+								</option><option value="29">29
+								</option><option value="30">30
+								</option><option value="31">31
+							</option></select>
+							<select name="dobMonth">
+								<option selected="selected" value="">Month
+								</option><option value="01">January
+								</option><option value="02">February
+								</option><option value="03">March
+								</option><option value="04">April
+								</option><option value="05">May
+								</option><option value="06">June
+								</option><option value="07">July
+								</option><option value="08">August
+								</option><option value="09">September
+								</option><option value="10">October
+								</option><option value="11">November
+								</option><option value="12">December
+							</option></select>
+							
+							<select name="dobYear">
+								<option selected="selected" value="">Year
+								</option><option value="2002">2002
+								</option><option value="2001">2001
+								</option><option value="2000">2000
+								</option><option value="1999">1999
+								</option><option value="1998">1998
+								</option><option value="1997">1997
+								</option><option value="1996">1996
+								</option><option value="1995">1995
+								</option><option value="1994">1994
+								</option><option value="1993">1993
+								</option><option value="1992">1992
+								</option><option value="1991">1991
+								</option><option value="1990">1990
+								</option><option value="1989">1989
+								</option><option value="1988">1988
+					
+							</option></select>							
+						</td>
+					</tr>
+				
+					<tr>
+						<td align="right"><font class="defaultfont" size=4>Gender:&nbsp;</font></td>
+						<td>
+							<input name="gender" value="m" type="radio"><font class="defaultfont" size=4>Male</font>&nbsp;&nbsp;&nbsp;
+							<input name="gender" value="f" type="radio"><font class="defaultfont" size=4>Female</font>&nbsp;&nbsp;&nbsp;
+						</td>
+					</tr>
+					
+					<tr>
+						<td align="right"><font class="defaultfont" size=4>Address:&nbsp;</font></td>
+						<td><textarea name="studentAddress" rows="3" cols="30"></textarea></td>
+					</tr>
+					
+				
+					<tr>
+						<td align="right"><font class="defaultfont" size=4>Password:&nbsp;</font></td>
+						<td><input name="password" size="12" type="password" required="required"></td>
+					</tr>
+					<tr>
+						<td align="right"><font class="defaultfont" size=4>Retype Password:&nbsp;</font></td>
+						<td><input name="retypePassword" size="12" type="password" required="required"></td>
+					</tr>
+            </table>
+            <br>
+            
+ 
+	
+	
+    <table><tr><td ><button type="Submit" name="submit" class="post">&nbsp;SUBMIT&nbsp;</button></td><td>&nbsp;&nbsp;&nbsp;</td><td><button type="reset" name="Reset">Reset</button></td></tr></table>
+
+ </form>
+ <br><br><br><br>
+ 
+</body>
+</html>
